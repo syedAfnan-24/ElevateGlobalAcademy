@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gallery</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .row > .column {
+      padding: 0 8px;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    .column {
+      float: left;
+      width: 25%;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .mySlides {
+      display: none;
+    }
+    
+    .cursor {
+      cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    img {
+      margin-bottom: -4px;
+    }
+    
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+    
+    .demo {
+      opacity: 0.6;
+    }
+    
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+    
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    </style>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Updated: Aug 30 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo.png" alt=""></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h2>Our Trainers and Students</h2>
+        <p>"Capturing Moments of Success: Trainer and Student Gallery"</p>
+    </div>
+    </div><!-- End Breadcrumbs -->
+
+<div class="row" style="padding-left: 4%;padding-right: 4%;">
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (1).png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (2).png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (3).png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  
+</div>
+
+<div class="row" style="padding-left: 4%;padding-right: 4%;">
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (4).png" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (5).png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (6).png" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (7).png" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div class="row" style="padding-left: 4%;padding-right: 4%;">
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (8).png" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (9).png" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (10).png" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (11).png" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div class="row" style="padding-left: 4%;padding-right: 4%;">
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (12).png" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (13).png" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (14).png" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (15).png" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div class="row" style="padding-left: 4%;padding-right: 4%;">
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (16).png" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (17).png" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (18).png" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+  </div>
+  <div class="column" style="padding: 2%;">
+    <img src="assets/img/thumbnail/thumbnail (19).png" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (1).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (2).png" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (3).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (4).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (5).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (6).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (7).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (8).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (9).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (10).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (11).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (12).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (13).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (14).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (15).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (16).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (17).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (18).png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      
+      <img src="assets/img/trainers/testimonial (19).png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <!-- <div class="column">
+      <img class="demo cursor" src="assets/img/trainers/testimonial.png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/img/trainers/testimonial (1).png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/img/trainers/testimonial (2).png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/img/trainers/testimonial (3).png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div> -->
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+      
+    <!-- ======= Trainers Section ======= -->
+    <!-- <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial2.png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial3 (1).png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial3 (8).png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial3 (2).png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial3 (3).png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/testimonial3 (4).png" class="img-fluid" alt="">
+              <div class="member-content">
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img src="assets/img/trainers/testimonial3 (5).png" class="img-fluid" alt="">
+                <div class="member-content">
+                  <p>
+                    Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img src="assets/img/trainers/testimonial3 (10).png" class="img-fluid" alt="">
+                <div class="member-content">
+                  <p>
+                    Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                  </p>
+                  <div class="social">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <img src="assets/img/trainers/testimonial3 (11).png" class="img-fluid" alt="">
+                <div class="member-content">
+                  <p>
+                    Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (16).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (14).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                    </p>
+                    <div class="social">
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (8).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="row" data-aos="zoom-in" data-aos-delay="100">
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (12).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (13).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                    </p>
+                    <div class="social">
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member">
+                  <img src="assets/img/trainers/testimonial3 (15).png" class="img-fluid" alt="">
+                  <div class="member-content">
+                    <p>
+                      Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member">
+                    <img src="assets/img/trainers/testimonial3 (6).png" class="img-fluid" alt="">
+                    <div class="member-content">
+                      <p>
+                        Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                      </p>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member">
+                    <img src="assets/img/trainers/testimonial3 (7).png" class="img-fluid" alt="">
+                    <div class="member-content">
+                      <p>
+                        Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                      </p>
+                      <div class="social">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member">
+                    <img src="assets/img/trainers/testimonial3 (9).png" class="img-fluid" alt="">
+                    <div class="member-content">
+                      <p>
+                        Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+  
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top" style="background-color: #0d3273">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 style="color: white;">Elevate Global Academy</h3>
+            <p style="color: white; font-family: 'Times New Roman', Times, serif;">
+              No.348, 1st Floor,<br>
+              Between 10th and 11th Cross Rd, near TRENDS,<br>
+              Malleshwaram, Bengaluru, Karnataka 560003<br><br>
+              <strong>Phone:</strong> +91 9614078656<br>
+              <strong>Mail: </strong> info@elevateglobal.in <br>
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="color: white;">Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="index.html" style="color: white;">Home</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="about.html" style="color: white;">About us</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="courses.html" style="color: white;">Services</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="gallery.html" style="color: white;">Gallery</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="contact.html" style="color: white;">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="color: white;">Our Courses</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-german.html" style="color: white;">German</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-french.html" style="color: white;">French</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-spanish.html" style="color: white;">Spanish</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-english.html" style="color: white;">English</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-IELTS.html" style="color: white;">IELTS</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-oet.html" style="color: white;">OET</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-pte.html" style="color: white;">PTE</a></li>
+              <li><i class="bx bx-chevron-right" style="color: white;"></i> <a href="course-details-toeic.html" style="color: white;">TOEIC</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Elevate Global Academy</span></strong>. All Rights Reserved
+        </div>
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
